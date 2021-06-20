@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Demo Cart App Regression Test Suite" thread-count="3" 
+     parallel = "tests"  verbose="3">
+
+<listeners>
+		<listener
+			class-name="com.qa.cart.listeners.ExtentReportListener" />
+		<listener 
+			class-name="com.qa.cart.listeners.AllureReportsListener" />	
+	</listeners>
+
+
+	<test name="Login Test">
+	
+	 <classes>
+			<class name="com.qa.cart.tests.LoginPageTest" />
+		</classes>
+   </test>
+   
+   <test name="Accounts Test">
+		 <classes>
+			<class name="com.qa.cart.tests.AccPageTest" />
+		</classes>
+   </test>
+   
+    <test name="ProductPage Test">
+		 <classes>
+			<class name="com.qa.cart.tests.ProductPageTest" />
+		</classes>
+   </test>
+	
+		
+	 
+	</suite>
